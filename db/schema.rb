@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_20_083743) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_20_090130) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -43,6 +43,17 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_20_083743) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "section_items", force: :cascade do |t|
+    t.bigint "section_id", null: false
+    t.bigint "item_id", null: false
+    t.integer "display_order", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_section_items_on_item_id"
+    t.index ["section_id", "item_id"], name: "index_section_items_on_section_id_and_item_id", unique: true
+    t.index ["section_id"], name: "index_section_items_on_section_id"
+  end
+
   create_table "sections", force: :cascade do |t|
     t.string "label", null: false
     t.string "description"
@@ -52,4 +63,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_20_083743) do
 
   add_foreign_key "menu_sections", "menus"
   add_foreign_key "menu_sections", "sections"
+  add_foreign_key "section_items", "items"
+  add_foreign_key "section_items", "sections"
 end
