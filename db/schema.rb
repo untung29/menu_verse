@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_20_143502) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_20_145520) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -20,7 +20,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_20_143502) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_item_modifier_groups_on_item_id"
-    t.index ["modifier_group_id"], name: "index_item_modifier_groups_on_modifier_group_id"
+    t.index ["modifier_group_id"], name: "index_item_modifier_groups_on_modifier_group_id", unique: true
   end
 
   create_table "items", force: :cascade do |t|
