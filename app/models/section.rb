@@ -3,5 +3,5 @@ class Section < ApplicationRecord
     has_one :menu, through: :menu_sections
 
     has_many :section_items
-    has_many :items, through :section_items
+    has_many :items, through: :section_items
 end
