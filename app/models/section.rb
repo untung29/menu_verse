@@ -1,4 +1,4 @@
 class Section < ApplicationRecord
-    has_many :menu_sections
-    has_many :menus, through: :menu_sections
+    has_one :menu_section, dependent: :restrict_with_error
+    has_one :menu, through: :menu_sections
 end

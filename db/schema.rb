@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_20_034816) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_20_083743) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -31,7 +31,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_20_034816) do
     t.datetime "updated_at", null: false
     t.index ["menu_id", "section_id"], name: "index_menu_sections_on_menu_id_and_section_id", unique: true
     t.index ["menu_id"], name: "index_menu_sections_on_menu_id"
-    t.index ["section_id"], name: "index_menu_sections_on_section_id"
+    t.index ["section_id"], name: "index_menu_sections_on_section_id", unique: true
   end
 
   create_table "menus", force: :cascade do |t|
