@@ -57,5 +57,14 @@ module Types
     def modifier_groups
       ModifierGroup.all
     end
+
+    # Fetch specific modifier group
+    field :modifier_group, ModifierGroupType, null: false, description: "Retrieve a specific modifier group" do
+      argument :id, ID, required: true
+    end
+
+    def modifier_group(id:)
+      ModifierGroup.find(id)
+    end
   end
 end
