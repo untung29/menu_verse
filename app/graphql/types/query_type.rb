@@ -73,5 +73,14 @@ module Types
     def modifiers
       Modifier.all
     end
+
+    # Fetch a specific modifier
+    field :modifier, ModifierType, null: false, description: "Retrieve a specific modifier" do
+      argument :id, ID, required: true
+    end
+
+    def modifier(id:)
+      Modifier.find(id)
+    end
   end
 end
