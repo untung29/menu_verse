@@ -52,7 +52,7 @@ module Types
       Item.find(id)
     end
 
-    # Fetch specific modifier group
+    # Fetch a list of modifier groups
     field :modifier_groups, [ ModifierGroupType ], null: false, description: "Retrieve a list of modifier groups"
     def modifier_groups
       ModifierGroup.all
@@ -65,6 +65,13 @@ module Types
 
     def modifier_group(id:)
       ModifierGroup.find(id)
+    end
+
+
+    # Fetch a list of modifiers
+    field :modifiers, [ ModifierType ], null: false, description: "Retrieve a list of modifiers"
+    def modifiers
+      Modifier.all
     end
   end
 end
