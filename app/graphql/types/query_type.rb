@@ -42,5 +42,14 @@ module Types
     def items
       Item.all
     end
+
+    # Fetch specific item
+    field :item, ItemType, null: false, description: "Retrieve a specific item" do
+      argument :id, ID, required: true
+    end
+
+    def item(id:)
+      Item.find(id)
+    end
   end
 end
