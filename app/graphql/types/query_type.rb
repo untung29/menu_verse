@@ -25,5 +25,14 @@ module Types
     def sections
       Section.all
     end
+
+    # Fetch specific section
+    field :section, SectionType, null: false, description: "Retrieve a specific section" do
+      argument :id, ID, required: true
+    end
+
+    def section(id:)
+      Section.find(id)
+    end
   end
 end
