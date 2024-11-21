@@ -34,5 +34,13 @@ module Types
     def section(id:)
       Section.find(id)
     end
+
+
+    # Fetch all Items
+    field :items, [ ItemType ], null: false, description: "Retrieve a list of items"
+
+    def items
+      Item.all
+    end
   end
 end
