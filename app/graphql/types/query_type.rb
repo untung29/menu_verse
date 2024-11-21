@@ -13,8 +13,17 @@ module Types
     field :menu, MenuType, null: false, description: "Retrieve a menu by its ID" do
        argument :id, ID, required: true
     end
+
     def menu(id:)
       Menu.find(id)
+    end
+
+
+    # Fetch all sections
+    field :sections, [ SectionType ], null: false, description: "Retrieve a list of sections"
+
+    def sections
+      Section.all
     end
   end
 end
