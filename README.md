@@ -13,14 +13,15 @@ git clone https://github.com/untung29/menu_verse.git
 cd menu_verse
 ```
 
-### **2. Install Dependencies
+### 2. Install Dependencies
+
 Ensure you have the following installed:
 
-* Ruby: 3.3.6
-* Rails: 8.0.0
+- Ruby: 3.3.6
+- Rails: 8.0.0
 
 Then, install the required gems:
 
-``` bash
+```bash
 bundle install
 ```
