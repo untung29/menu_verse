@@ -19,7 +19,6 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-
 development:
   <<: *default
   database: menu_verse_development
@@ -84,6 +83,7 @@ production:
     database: menu_verse_production
     username: menu_verse
     password: <%= ENV["MENU_VERSE_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DATABASE_URL"] %>
   cache:
     <<: *primary_production
     database: menu_verse_production_cache
