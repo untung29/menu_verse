@@ -5,5 +5,6 @@ module Types
     field :default_quantity, Int, null: false
     field :price_override, Float
     field :item, ItemType, null: false
+    field :modifier_group, ModifierGroupType, null: false
   end
 end
