@@ -42,6 +42,8 @@ rails server
 
 ## **🚀 Performance Metrics 🚀**
 
+### Metrics Summary
+
 #### Response Time
 
 * Median (50th Percentile): 31 ms
@@ -62,3 +64,12 @@ The application operates well within its memory quota, indicating efficient memo
 * No 5XX Errors observed.
 The low throughput reflects controlled testing conditions. 
 Additional testing under higher loads can provide a clearer picture of performance.
+
+### How we can improve?
+
+### 1. Add Caching
+Cache frequently accessed data (like menus and sections) to speed things up even more. We can use Rails.cache or Redis for this.
+
+### 2. Monitor and Test
+Use Heroku’s monitoring tools to watch for spikes in response times or memory usage.
+Run load tests to simulate heavy traffic and spot potential bottlenecks.
