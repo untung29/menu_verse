@@ -49,7 +49,8 @@ rails server
 - Median (50th Percentile): 31 ms
 - Minimum (95th Percentile): 2 ms
 - Maximum (95th Percentile): 159 ms
-  The response times are reasonable, though reducing the maximum response time would further enhance the application's performance.
+
+The response times are reasonable, though reducing the maximum response time would further enhance the application's performance.
 
 #### Memory Usage
 
@@ -61,8 +62,9 @@ rails server
 
 - Requests Per Second (RPS): < 1 RPS
 - No 5XX Errors observed.
-  The low throughput reflects controlled testing conditions.
-  Additional testing under higher loads can provide a clearer picture of performance.
+
+The low throughput reflects controlled testing conditions.
+Additional testing under higher loads can provide a clearer picture of performance.
 
 ### How we can improve?
 
