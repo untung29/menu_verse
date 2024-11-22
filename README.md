@@ -33,3 +33,9 @@ Create and seed the database:
 ```bash
 rails db:create db:migrate db:seed
 ```
+
+### 4. Start the server
+
+```bash
+rails server
+```
