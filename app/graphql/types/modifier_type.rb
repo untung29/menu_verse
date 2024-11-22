@@ -4,5 +4,6 @@ module Types
     field :display_order, Int, null: false
     field :default_quantity, Int, null: false
     field :price_override, Float
+    field :item, ItemType, null: false
   end
 end
