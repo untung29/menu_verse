@@ -40,27 +40,27 @@ rails db:create db:migrate db:seed
 rails server
 ```
 
-# 🚀 Performance Metrics 🚀
+## **🚀 Performance Metrics 🚀**
 
 This section highlights the current performance of the application deployed on Heroku and suggests potential areas for improvement.
 
-## Metrics Summary
+### Metrics Summary
 
-### Response Time
+#### Response Time
 
 Median (50th Percentile): 31 ms
 Minimum (95th Percentile): 2 ms
 Maximum (95th Percentile): 159 ms
 The response times are reasonable, though reducing the maximum response time would further enhance the application's performance.
 
-### Memory Usage
+#### Memory Usage
 
 Current Memory Usage: 21.8 MB
 Maximum Memory Usage: 111.5 MB
 Memory Quota: 512 MB
 The application operates well within its memory quota, indicating efficient memory usage.
 
-### Throughput
+#### Throughput
 
 Requests Per Second (RPS): < 1 RPS
 No 5XX Errors observed.
