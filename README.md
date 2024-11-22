@@ -46,30 +46,32 @@ rails server
 
 #### Response Time
 
-* Median (50th Percentile): 31 ms
-* Minimum (95th Percentile): 2 ms
-* Maximum (95th Percentile): 159 ms
-The response times are reasonable, though reducing the maximum response time would further enhance the application's performance.
+- Median (50th Percentile): 31 ms
+- Minimum (95th Percentile): 2 ms
+- Maximum (95th Percentile): 159 ms
+  The response times are reasonable, though reducing the maximum response time would further enhance the application's performance.
 
 #### Memory Usage
 
-* Current Memory Usage: 21.8 MB
-* Maximum Memory Usage: 111.5 MB
-Memory Quota: 512 MB
-The application operates well within its memory quota, indicating efficient memory usage.
+- Current Memory Usage: 21.8 MB
+- Maximum Memory Usage: 111.5 MB
+- Memory Quota: 512 MB
+  The application operates well within its memory quota, indicating efficient memory usage.
 
 #### Throughput
 
-* Requests Per Second (RPS): < 1 RPS
-* No 5XX Errors observed.
-The low throughput reflects controlled testing conditions. 
-Additional testing under higher loads can provide a clearer picture of performance.
+- Requests Per Second (RPS): < 1 RPS
+- No 5XX Errors observed.
+  The low throughput reflects controlled testing conditions.
+  Additional testing under higher loads can provide a clearer picture of performance.
 
 ### How we can improve?
 
 ### 1. Add Caching
+
 Cache frequently accessed data (like menus and sections) to speed things up even more. We can use Rails.cache or Redis for this.
 
 ### 2. Monitor and Test
+
 Use Heroku’s monitoring tools to watch for spikes in response times or memory usage.
 Run load tests to simulate heavy traffic and spot potential bottlenecks.
