@@ -5,5 +5,6 @@ module Types
         field :state, String, null: false
         field :start_date, GraphQL::Types::ISO8601DateTime, null: false
         field :end_date, GraphQL::Types::ISO8601DateTime, null: true
+        field :sections, [ SectionType ], null: true
     end
 end
