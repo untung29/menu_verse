@@ -25,3 +25,11 @@ Then, install the required gems:
 ```bash
 bundle install
 ```
+
+### 3. Set Up the Database
+
+Create and seed the database:
+
+```bash
+rails db:create db:migrate db:seed
+```
