@@ -56,7 +56,6 @@ rails server
 - Current Memory Usage: 21.8 MB
 - Maximum Memory Usage: 111.5 MB
 - Memory Quota: 512 MB
-  The application operates well within its memory quota, indicating efficient memory usage.
 
 #### Throughput
 
