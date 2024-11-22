@@ -9,6 +9,6 @@ Follow these steps to get MenuVerse running on your local machine:
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/menu_verse.git
+git clone https://github.com/untung29/menu_verse.git
 cd menu_verse
 ```
