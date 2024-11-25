@@ -71,3 +71,6 @@ Cache frequently accessed data (like menus and sections) to speed things up even
 
 Use Heroku’s monitoring tools to watch for spikes in response times or memory usage.
 Run load tests to simulate heavy traffic and spot potential bottlenecks.
+
+### 3. Region
+The application is currently hosted on Heroku’s low-cost plan, which does not provide an option for an Asia region. As a result, it is deployed in the US region, which may cause some latency for users in Singapore and nearby regions. We can plan to upgrade this plan at the later stage when the app gains more traction and user engagement.
