@@ -15,7 +15,7 @@ module Mutations
     def resolve(id:, label: nil, description: nil)
       section = Section.find_by(id: id)
 
-      { section: section, errors: [ "Section not found" ] } unless section
+      return { section: section, errors: [ "Section not found" ] } unless section
 
       if section.update({ label: label, description: description }.compact)
         { section: section, errors: [] }

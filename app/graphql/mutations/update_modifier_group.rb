@@ -18,7 +18,7 @@ module Mutations
       modifier_group = ModifierGroup.find_by(id: id)
 
       # Return error if not found
-      { modifier_group: nil, errors: [ "Modifier Group not found" ] } unless modifier_group
+      return { modifier_group: nil, errors: [ "Modifier Group not found" ] } unless modifier_group
 
       if modifier_group.update({ label: label, selection_required_min: selection_required_min, selection_required_max: selection_required_max }.compact)
         { modifier_group: modifier_group, errors: [] }

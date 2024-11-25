@@ -19,7 +19,7 @@ module Mutations
       menu = Menu.find_by(id: id)
 
       # Return error if menu not found
-      { menu: nil, errors: [ "Menu not found" ] } unless menu
+      return { menu: nil, errors: [ "Menu not found" ] } unless menu
 
 
       if menu.update({ label: label, start_date: start_date, end_date: end_date, state: state }.compact)

@@ -15,7 +15,7 @@ module Mutations
     def resolve(id:, label: nil, description: nil, price: nil)
       item = Item.find_by(id: id)
       # Return error if not found
-      { item: nil, errors: [ "Item not found" ] } unless item
+      return { item: nil, errors: [ "Item not found" ] } unless item
 
 
       if item.update({ label: label, description: description, price: price }.compact)

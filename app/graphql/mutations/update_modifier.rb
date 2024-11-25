@@ -16,7 +16,7 @@ module Mutations
       modifier = Modifier.find_by(id: id)
 
       # Return error if not found
-      { modifier: nil, errors: [ "Modifier not found" ] } unless modifier
+      return { modifier: nil, errors: [ "Modifier not found" ] } unless modifier
 
 
       if modifier.update({ display_order: display_order, default_quantity: default_quantity, price_override: price_override }.compact)
