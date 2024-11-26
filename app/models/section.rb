@@ -4,4 +4,8 @@ class Section < ApplicationRecord
 
     has_many :section_items
     has_many :items, through: :section_items
+
+    STATES = %w[active inactive].freeze
+
+    validates :state, inclusion: { in: STATES }
 end

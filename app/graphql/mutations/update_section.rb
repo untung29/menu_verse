@@ -11,16 +11,17 @@ module Mutations
     argument :id, ID, required: true
     argument :label, String, required: false
     argument :description, String, required: false
+    argument :state, String, required: false
 
-    def resolve(id:, label: nil, description: nil)
+    def resolve(id:, label: nil, description: nil, state: nil)
       section = Section.find_by(id: id)
 
       return { section: section, errors: [ "Section not found" ] } unless section
 
-      if section.update({ label: label, description: description }.compact)
+      if section.update({ label: label, description: description, state: state }.compact)
         { section: section, errors: [] }
       else
-      { section: nil, menu: section.errors.full_messages }
+      { section: nil, errors: section.errors.full_messages }
       end
     end
   end

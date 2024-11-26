@@ -4,5 +4,6 @@ module Types
     field :label, String, null: false
     field :description, String
     field :items, [ ItemType ], null: true
+    field :state, String, null: false
   end
 end
