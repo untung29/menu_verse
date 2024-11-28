@@ -7,5 +7,5 @@ class Item < ApplicationRecord
 
     has_one :modifier
 
-    validates :quantity, numericality: { only_integer: true, greater_than: 0 }
+    validates :quantity, numericality: { only_integer: true, greater_than_or_equal: 0 }
 end
