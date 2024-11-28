@@ -7,10 +7,9 @@ module Types
         field :end_date, GraphQL::Types::ISO8601DateTime, null: true
         field :sections, [ MenuSectionType ], null: false
 
-    def sections
-      object.menu_sections.includes(:section).order(:display_order).map do |menu_section|
-        menu_section.attributes.merge(menu_section.section.attributes)
-      end
-    end
+
+        def sections
+          object.menu_sections.includes(:section).order(:display_order)
+        end
     end
 end
