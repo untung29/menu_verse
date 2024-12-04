@@ -9,6 +9,6 @@ class CreateMenuSections < ActiveRecord::Migration[8.0]
     end
 
     # Add a unique composite index for the pair of menu_id and section_id
-    add_index :menu_sections, [:menu_id, :section_id], unique: true
+    add_index :menu_sections, [ :menu_id, :section_id ], unique: true
   end
 end
